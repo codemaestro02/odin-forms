@@ -1,0 +1,201 @@
+@font-face {
+	font-family: Norse;
+	src: url(../fonts/Norse-Bold.otf);
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body,
+html,
+.container,
+.row {
+	width: 100%;
+}
+
+.row,
+aside,
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+aside {
+	background: url(../media/green-bush.jpg) no-repeat center center;
+	background-size: cover;
+	width: 40vw;
+
+}
+
+.logo {
+	background: rgb(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 0.2em;
+	width: 100%;
+	font-family: Norse, sans-serif;
+	font-size: 80px;
+}
+
+#go-down{
+	display: none;
+}
+
+main {
+	width: calc(100% - 40vw);
+	text-align: left;
+	line-height: 1.5;
+	background-color: #f0f0f0;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+main .declaration {
+	padding: 4em 5em 1em 3em;
+}
+main .declaration p {
+	padding: 0.5em 0;
+}
+
+main .sign-in {
+	padding: 1em 0;
+}
+
+main .sign-in form {
+
+    
+
+    .form{
+        background-color: #fff;
+		padding: 40px 3em;
+		box-shadow: 0px 4px 6px rgb(0, 0, 0, 0.3);
+
+		h4{
+			padding-bottom: 20px;
+		}
+		
+    }
+
+	.form-inputs {
+		
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1em;
+		grid-template-rows: repeat(3, 1fr);
+	}
+}
+
+main .sign-in .form-inputs label {
+	font-size: 0.6em;
+	display: block;
+	text-transform: uppercase;
+}
+
+input {
+	border: 1px solid #e5e7eb;
+}
+
+input:focus {
+	border: 0.5px solid rgb(51, 129, 255);
+	box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
+	outline: none;
+}
+
+input::placeholder{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+section.buttons{
+	margin: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button[type="submit"] {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	color: white;
+	width: clamp(120px, 80%, 150px);
+	height: 40px;
+	box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
+	border: none;
+	border-radius: 5px;
+	background-color: #596d48;
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+button[type="submit"]:disabled{
+	color: rgb(255, 255, 255, 0.5);
+	cursor: not-allowed;
+}
+
+
+section.buttons a {
+	text-decoration: underline;
+	font-weight: 600;
+	color: #596d48;
+}
+
+
+@media screen and (max-width: 720px) {
+	
+	.row{
+		display: flex;
+		flex-direction: column;
+	}
+	aside, main{
+		width: inherit;
+		height: initial;
+	}
+	aside{
+		position: relative;
+	}
+
+	.logo{
+		position: relative;
+		bottom: 30vh;
+	}
+
+	#go-down{
+		display: block;
+		border: 5px solid #596d48;
+		border-radius: 5px;
+		padding: 10px;
+		position: absolute;
+		top: 70vh;
+		right: 50px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+	}
+
+	#go-down a{
+		text-decoration: none;
+		color: #596d48;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+		font-family: Norse;
+		font-weight: 900;
+		scroll-behavior: smooth;
+	}
+
+	#declaration{
+		text-align: center;
+	}
+
+	main .sign-in form .form-inputs{
+		grid-template-rows: repeat(6, 1fr);
+		grid-template-columns: auto;
+	}
+}

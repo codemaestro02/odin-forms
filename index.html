@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<title>Odin Sign Up Form</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<aside>
+					<div class="logo">
+						<img
+							src="./media/odin-lined.png"
+							alt="Odin Logo"
+							width="80px"
+							height="100px"
+						/>
+						ODIN
+					</div>
+					<div id="go-down">
+						<a href="#declaration">
+							<img src="./media/icons8-arrow-down-ios-17-filled/arrow-down-100.png" width=50 height=50 alt="Go down">
+							Click to move down
+						</a>
+					</div>
+				</aside>
+				<main>
+					<div class="declaration" id="declaration">
+						<p>
+							<b>
+								This is not a real online service! You know you need something
+								like this in your life to help you realize your deepest dreams.
+								Sign up <em>now</em> to get started.
+							</b>
+						</p>
+						<p>
+							<b>You <em>know</em> you want to.</b>
+						</p>
+					</div>
+					<div class="sign-in">
+						<form action="" method="post">
+							<div class="form">
+								<h4>Let's do this!</h4>
+								<section class="form-inputs">
+									<div class="input">
+										<label for="first-name">First Name</label>
+										<input
+											type="text"
+											name="first-name"
+											id="first-name"
+											placeholder="John"
+											required
+										/>
+									</div>
+									<div class="input">
+										<label for="last-name">Last Name</label>
+										<input
+											type="text"
+											name="last-name"
+											id="last-name"
+											placeholder="Doe"
+											required
+										/>
+									</div>
+									<div class="input">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" placeholder="johndoe@gmail.com" required />
+									</div>
+									<div class="input">
+										<label for="phone-number">Phone Number</label>
+										<input
+											type="tel"
+											pattern="(\+234|0)\d{10}"
+											name="phone-number"
+											placeholder="Enter your tel"
+											id="phone-number"
+											required
+										/>
+									</div>
+									<div class="input">
+										<label for="password">Password</label>
+										<input
+											type="password"
+											name="password"
+											id="password"
+											placeholder="Enter your password"
+											pattern="\w{8}"
+											required
+										/>
+									</div>
+									<div class="input">
+										<label for="confirm-password">Confirm Password</label>
+										<input
+											type="password"
+											name="confirm-password"
+											id="confirm-password"
+											placeholder="Confirm your password"
+											required
+										/>
+									</div>
+								</section>
+							</div>
+							<section class="buttons">
+								<button type="submit" disabled>Create Account</button>
+
+								<p>Already have an account? <a href="#">Log in</a></p>
+							</section>
+						</form>
+					</div>
+				</main>
+			</div>
+		</div>
+	</body>
+
+	<script src="./js/script.js"></script>
+</html>
